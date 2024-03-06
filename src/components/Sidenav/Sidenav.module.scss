@@ -1,0 +1,62 @@
+@import "../../../styles/variables";
+@import "../../../styles/media-queries.scss";
+
+.container {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 99;
+  background-color: $blue;
+  display: flex;
+  flex-direction: column;
+  -webkit-animation: slideIn 0.2s ease-in-out forwards;
+  -moz-animation: slideIn 0.2s forwards;
+  animation: slideIn 0.2s ease-in-out forwards;
+}
+
+@-webkit-keyframes slideIn {
+  0% {
+    transform: translateX(300px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@-moz-keyframes slideIn {
+  0% {
+    transform: translateX(300px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes slideIn {
+  0% {
+    transform: translateX(300px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.linksContainer {
+  margin-top: 80px;
+  padding: 20px;
+  & > a {
+    font-size: 18px;
+    color: $white;
+    text-align: left;
+    margin-top: 0px;
+    margin-bottom: 18px;
+    font-weight: 600;
+    font-family: "Open Sans";
+  }
+}
+
+@include desktop-only {
+  .container {
+    display: none;
+  }
+}

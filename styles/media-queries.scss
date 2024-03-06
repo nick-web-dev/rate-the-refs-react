@@ -1,0 +1,58 @@
+// media aliases and breakpoints
+$screen-sm-max: 599px;
+$screen-md-min: 600px;
+$screen-md-max: 959px;
+$screen-lg-min: 960px;
+$screen-xl-min: 1200px;
+
+// media devices
+@mixin phone-only {
+  @media screen and (max-width: #{$screen-sm-max}) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media screen and (min-width: #{$screen-md-min}) and (max-width: #{$screen-md-max}) {
+    @content;
+  }
+}
+
+@mixin desktop-only {
+  @media screen and (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+// media lt queries (Less Than)
+
+@mixin lt-desktop-xl {
+  @media screen and (max-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+@mixin lt-desktop {
+  @media screen and (max-width: #{$screen-md-max}) {
+    @content;
+  }
+}
+
+@mixin lt-tablet {
+  @media screen and (max-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+// media gt queries (Greater Than
+@mixin gt-phone {
+  @media screen and (min-width: #{$screen-sm-max}) {
+    @content;
+  }
+}
+
+@mixin gt-tablet {
+  @media screen and (min-width: #{$screen-md-max}) {
+    @content;
+  }
+}

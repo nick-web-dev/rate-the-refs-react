@@ -1,0 +1,63 @@
+@import "../../../styles/variables";
+@import "../../../styles/media-queries";
+
+.container {
+  background-color: $blue;
+}
+
+.contentContainer {
+  padding-top: 80px;
+  background-color: $white;
+  justify-content: center;
+  align-items: center;
+
+  @include lt-desktop {
+    padding-top: 20px;
+  }
+
+  & > h1 {
+    font-family: "Anton";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 38px;
+    line-height: 130%;
+    max-width: 720px;
+    text-align: center;
+    color: $black;
+
+    @include lt-desktop {
+      font-size: 30px;
+      max-width: 90%;
+    }
+  }
+
+  .heroImageDiv {
+    max-width: 1000px;
+    z-index: 99;
+    .heroImage {
+      max-width: 100%;
+      object-fit: contain;
+      @include lt-desktop {
+        display: none;
+      }
+    }
+    .heroImageMobile {
+      @include desktop-only {
+        display: none;
+      }
+      object-fit: contain;
+      max-width: 100%;
+    }
+  }
+}
+
+.emptyBlue {
+  margin-top: -200px;
+  background-color: $blue;
+  width: 100%;
+  height: 300px;
+  @include lt-desktop {
+    margin-top: -150px;
+    height: 200px;
+  }
+}

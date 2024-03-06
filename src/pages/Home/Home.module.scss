@@ -1,0 +1,55 @@
+@import "../../../styles/variables";
+@import "../../../styles/media-queries";
+
+.container {
+  margin-top: 80px;
+}
+
+.contentContainer {
+  background-color: $blue;
+  & > h1 {
+    font-family: "Anton";
+    font-size: 24px;
+    line-height: 100%;
+    align-self: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: $black;
+  }
+
+  .actions {
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    align-self: center;
+    margin-top: 30px;
+
+    & > img {
+      flex: 1 0 21%;
+      object-fit: contain;
+
+      @include lt-desktop {
+        flex: 1 0 45%;
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  .homeFooter {
+    margin-top: 30px;
+    align-self: center;
+    flex-direction: row;
+    max-width: 1000px;
+    align-items: center;
+    & > img {
+      object-fit: contain;
+      max-width: 100%;
+    }
+    @include lt-desktop {
+      flex-direction: column-reverse;
+    }
+  }
+}
